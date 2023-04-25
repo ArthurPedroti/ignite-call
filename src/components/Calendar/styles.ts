@@ -1,4 +1,4 @@
-import { Text, styled } from '@ignite-ui/react'
+import { styled, Text } from '@ignite-ui/react'
 
 export const CalendarContainer = styled('div', {
   display: 'flex',
@@ -42,7 +42,7 @@ export const CalendarActions = styled('div', {
     },
 
     '&:focus': {
-      boxShadow: '0 0 0 2px $color$gray200',
+      boxShadow: '0 0 0 2px $colors$gray100',
     },
   },
 })
@@ -60,10 +60,9 @@ export const CalendarBody = styled('table', {
   },
 
   'tbody:before': {
-    content: '.',
-    lineHeight: '0.75rem',
+    content: '',
+    paddingBottom: '0.75rem',
     display: 'block',
-    color: '$gray800',
   },
 
   'tbody td': {
@@ -83,6 +82,7 @@ export const CalendarDay = styled('button', {
   '&:disabled': {
     background: 'none',
     cursor: 'default',
+    opacity: 0.4,
   },
 
   '&:not(:disabled):hover': {
@@ -90,6 +90,6 @@ export const CalendarDay = styled('button', {
   },
 
   '&:focus': {
-    boxShadow: '0 0 0 2px $color$gray200',
+    boxShadow: '0 0 0 2px $colors$gray100',
   },
 })
